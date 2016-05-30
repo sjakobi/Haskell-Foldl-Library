@@ -1079,6 +1079,8 @@ filtered p k x
     | p x = k x
     | otherwise = mempty
 {-# INLINABLE filtered #-}
+{-# SPECIALIZE filtered :: (a -> Bool) -> Handler a a #-}
+{-# SPECIALIZE filtered :: Monad m => (a -> Bool) -> HandlerM m a a #-}
 
 {- $reexports
     @Control.Monad.Primitive@ re-exports the 'PrimMonad' type class
