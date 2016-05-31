@@ -39,7 +39,7 @@ Library
         Control.Foldl.Text
     Other-Modules:
         Control.Foldl.Internal
-    GHC-Options: -O2 -Wall
+    GHC-Options: -O2 -Wall -flate-dmd-anal
 
 Benchmark benchmarks
     Type: exitcode-stdio-1.0
@@ -49,4 +49,4 @@ Benchmark benchmarks
         base,
         criterion,
         foldl
-    GHC-Options: -O2 -Wall -rtsopts
+    GHC-Options: -O2 -Wall -rtsopts -flate-dmd-anal

@@ -8,8 +8,8 @@ import qualified Prelude
 
 main :: IO ()
 main = defaultMain
-  [ env (return [1..10000 :: Int]) $ \ns ->
-      bgroup "[1..10000 :: Int]"
+  [ env (return [1..1000 :: Int]) $ \ns ->
+      bgroup "[1..1000 :: Int]"
         [ bgroup "sum" $ map ($ ns)
             [ bench "fold sum" .
                 whnf (fold sum)
